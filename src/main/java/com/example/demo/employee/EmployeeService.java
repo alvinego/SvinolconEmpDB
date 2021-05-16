@@ -1,27 +1,25 @@
 package com.example.demo.employee;
 
-import java.time.LocalDate;
-import java.time.Month;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Service
 public class EmployeeService {
 	
+	private final EmployeeRepository employeeRepository;
+	
+	@Autowired
+	public EmployeeService(EmployeeRepository employeeRepository) {
+		super();
+		this.employeeRepository = employeeRepository;
+	}
+
 	@GetMapping
 	public List<Employee> getEmployees(){
-		return List.of(
-				new Employee(
-						1l,
-						"Constance",
-						"Nwaukoni",
-						"constance.nwaukoni@svinolcon.com",
-						LocalDate.of(2000,Month.NOVEMBER,10),
-						21
-						)
-				);
+		return employeeRepository.findAll();
 	}
 
 }
