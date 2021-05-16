@@ -8,6 +8,8 @@ public class SvinolconEmpDbApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SvinolconEmpDbApplication.class, args);
+		
+		
 	}
 
 }
