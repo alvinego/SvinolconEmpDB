@@ -22,4 +22,9 @@ public class EmployeeService {
 		return employeeRepository.findAll();
 	}
 
+	public void addNewEmployee(Employee employee) {
+		System.out.println(employee);
+		
+	}
+
 }

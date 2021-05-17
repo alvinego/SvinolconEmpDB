@@ -19,15 +19,13 @@ public class EmployeeConfig{
 							"Constance",
 							"Nwaukoni",
 							"constance.nwaukoni@svinolcon.com",
-							LocalDate.of(2000,Month.NOVEMBER,10),
-							21
+							LocalDate.of(2000,Month.NOVEMBER,10)
 							);
 					Employee Alex = new Employee(
 							"Alex",
 							"Osho",
 							"alex.osho@svinolcon.com",
-							LocalDate.of(2000,Month.NOVEMBER,10),
-							24
+							LocalDate.of(2006,Month.APRIL,3)
 							);
 					
 					employeeRepository.saveAll(
